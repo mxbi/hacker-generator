@@ -7,6 +7,7 @@ import time
 # Parameters
 length = 3
 tldlist = ["net","org"]
+apikey = "*** PLACE API KEY HERE ***"
 
 i = 1
 while i < 2:
@@ -18,7 +19,6 @@ while i < 2:
 	print("Attempting " + domain)
 
 	# Query API
-	apikey = "*** PLACE API KEY HERE ***"
 	url = "http://api.whoapi.com/?apikey=" + apikey + "&r=taken&domain=" + domain
 	s = urllib2.urlopen(url)
 	contents = str(s.read())
